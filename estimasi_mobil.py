@@ -1,7 +1,8 @@
 import pickle
 import streamlit as st
 
-model = pickle.load(open('estimasi_mobil.sav', 'rb'))
+with open('estimasi_mobil.sav', 'rb') as file:
+    model = pickle.load(file)
 
 st.title('Estimasi Harga Mobil Bekas')
 
